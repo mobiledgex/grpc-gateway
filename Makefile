@@ -181,6 +181,12 @@ examples: $(EXAMPLE_DEPSRCS) $(EXAMPLE_SVCSRCS) $(EXAMPLE_GWSRCS) $(EXAMPLE_SWAG
 test: examples
 	go test -race ...
 	go test -race examples/integration -args -network=unix -endpoint=test.sock
+
+DOCKER_TAG ?=  $(shell date +"%Y-%m-%d" )
+build-docker:
+	docker build -t registry.mobiledgex.net:5000/mobiledgex/protoc-gen-swagger:${DOCKER_TAG} .
+	docker push registry.mobiledgex.net:5000/mobiledgex/protoc-gen-swagger:${DOCKER_TAG}
+
 changelog:
 	docker run --rm \
 		--interactive \
