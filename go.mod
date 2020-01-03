@@ -1,4 +1,4 @@
-module github.com/mobiledgex/grpc-gateway
+module github.com/grpc-ecosystem/grpc-gateway
 
 require (
 	github.com/ghodss/yaml v1.0.0
