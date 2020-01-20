@@ -1213,6 +1213,20 @@ func applyTemplate(p param) (*swaggerObject, error) {
 		// should be added here, once supported in the proto.
 	}
 
+	// Include any info overrides specified in the config file
+	info := p.reg.GetConfig().Info[p.File.GetName()]
+	if info != nil {
+		if version, found := info["version"]; found {
+			s.Info.Version = version
+		}
+		if title, found := info["title"]; found {
+			s.Info.Title = title
+		}
+		if desc, found := info["description"]; found {
+			s.Info.Description = desc
+		}
+	}
+
 	// Finally add any references added by users that aren't
 	// otherwise rendered.
 	addCustomRefs(s.Definitions, p.reg, customRefs)

@@ -82,6 +82,7 @@ type repeatedFieldSeparator struct {
 type Config struct {
 	SkipMethods map[string]string
 	SkipFields  map[string]map[string]string
+	Info        map[string]map[string]string
 }
 
 // NewRegistry returns a new Registry.
