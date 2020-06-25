@@ -14,8 +14,8 @@ import (
 	structpb "github.com/golang/protobuf/ptypes/struct"
 	"github.com/golang/protobuf/ptypes/timestamp"
 	"github.com/golang/protobuf/ptypes/wrappers"
-	"github.com/grpc-ecosystem/grpc-gateway/examples/proto/examplepb"
 	"github.com/grpc-ecosystem/grpc-gateway/runtime"
+	"github.com/grpc-ecosystem/grpc-gateway/runtime/internal/examplepb"
 )
 
 func TestJSONPbMarshal(t *testing.T) {
@@ -43,10 +43,10 @@ func TestJSONPbMarshal(t *testing.T) {
 			"b": examplepb.NumericEnum_ZERO,
 		},
 		RepeatedEnumAnnotation:   []examplepb.NumericEnum{},
-		EnumValueAnnotation: examplepb.NumericEnum_ONE,
+		EnumValueAnnotation:      examplepb.NumericEnum_ONE,
 		RepeatedStringAnnotation: []string{},
 		RepeatedNestedAnnotation: []*examplepb.ABitOfEverything_Nested{},
-		NestedAnnotation: &examplepb.ABitOfEverything_Nested{},
+		NestedAnnotation:         &examplepb.ABitOfEverything_Nested{},
 	}
 
 	for i, spec := range []struct {
@@ -264,10 +264,10 @@ func TestJSONPbEncoder(t *testing.T) {
 			"b": examplepb.NumericEnum_ZERO,
 		},
 		RepeatedEnumAnnotation:   []examplepb.NumericEnum{},
-		EnumValueAnnotation: examplepb.NumericEnum_ONE,
+		EnumValueAnnotation:      examplepb.NumericEnum_ONE,
 		RepeatedStringAnnotation: []string{},
 		RepeatedNestedAnnotation: []*examplepb.ABitOfEverything_Nested{},
-		NestedAnnotation: &examplepb.ABitOfEverything_Nested{},
+		NestedAnnotation:         &examplepb.ABitOfEverything_Nested{},
 	}
 
 	for i, spec := range []struct {
@@ -359,7 +359,7 @@ func TestJSONPbEncoderFields(t *testing.T) {
 		if err := enc.Encode(fixt.data); err != nil {
 			t.Errorf("enc.Encode(%#v) failed with %v; want success", fixt.data, err)
 		}
-		if got, want := buf.String(), fixt.json + string(m.Delimiter()); got != want {
+		if got, want := buf.String(), fixt.json+string(m.Delimiter()); got != want {
 			t.Errorf("enc.Encode(%#v) = %q; want %q", fixt.data, got, want)
 		}
 	}
@@ -465,6 +465,25 @@ func TestJSONPbDecoderFields(t *testing.T) {
 		if got, want := dest.Elem().Interface(), fixt.data; !reflect.DeepEqual(got, want) {
 			t.Errorf("dest = %#v; want %#v; input = %v", got, want, fixt.json)
 		}
+	}
+}
+
+func TestJSONPbDecoderUnknownField(t *testing.T) {
+	var (
+		m   runtime.JSONPb
+		got examplepb.ABitOfEverything
+	)
+	data := `{
+		"uuid": "6EC2446F-7E89-4127-B3E6-5C05E6BECBA7",
+		"unknownField": "111"
+	}`
+
+	runtime.DisallowUnknownFields()
+
+	r := strings.NewReader(data)
+	dec := m.NewDecoder(r)
+	if err := dec.Decode(&got); err == nil {
+		t.Errorf("m.Unmarshal(&got) not failed; want `unknown field` error; data=%q", data)
 	}
 }
 

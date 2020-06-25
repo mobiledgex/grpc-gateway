@@ -1,5 +1,561 @@
 # Change Log
 
+## [v1.14.6](https://github.com/grpc-ecosystem/grpc-gateway/tree/v1.14.6) (2020-05-25)
+[Full Changelog](https://github.com/grpc-ecosystem/grpc-gateway/compare/v1.14.5...v1.14.6)
+
+**Implemented enhancements:**
+
+- Feature request: support of go protocol buffer v2 [\#1147](https://github.com/grpc-ecosystem/grpc-gateway/issues/1147)
+
+**Fixed bugs:**
+
+- Bazel tests are flaky [\#968](https://github.com/grpc-ecosystem/grpc-gateway/issues/968)
+
+**Closed issues:**
+
+- Merging swagger specs \(for multiple protos belonging to same package\) fails to emit summary for some RPCs [\#1387](https://github.com/grpc-ecosystem/grpc-gateway/issues/1387)
+- Remove result/error envelope in streaming RPC response [\#1254](https://github.com/grpc-ecosystem/grpc-gateway/issues/1254)
+- cleanup: rename 'swagger' references to 'openapi' [\#675](https://github.com/grpc-ecosystem/grpc-gateway/issues/675)
+- Swagger: JSON definitions aren't CamelCased [\#375](https://github.com/grpc-ecosystem/grpc-gateway/issues/375)
+- Support emitting default values in JSON [\#233](https://github.com/grpc-ecosystem/grpc-gateway/issues/233)
+
+**Merged pull requests:**
+
+- Tidy up docs [\#1389](https://github.com/grpc-ecosystem/grpc-gateway/pull/1389) ([johanbrandhorst](https://github.com/johanbrandhorst))
+- Fix various misspellings [\#1381](https://github.com/grpc-ecosystem/grpc-gateway/pull/1381) ([bvwells](https://github.com/bvwells))
+- Remove usage of deprecated grpc.Errorf API [\#1380](https://github.com/grpc-ecosystem/grpc-gateway/pull/1380) ([bvwells](https://github.com/bvwells))
+- Add missing documentation for openapiv2 proto definition [\#1375](https://github.com/grpc-ecosystem/grpc-gateway/pull/1375) ([bvwells](https://github.com/bvwells))
+- deleted ISSUE\_TEMPLATE.md file from \_docs which was left by mistake [\#1368](https://github.com/grpc-ecosystem/grpc-gateway/pull/1368) ([iamrajiv](https://github.com/iamrajiv))
+- added Pull Request Template for grpc-gateway [\#1366](https://github.com/grpc-ecosystem/grpc-gateway/pull/1366) ([iamrajiv](https://github.com/iamrajiv))
+- Improve comments, fix indentation and add new line [\#1362](https://github.com/grpc-ecosystem/grpc-gateway/pull/1362) ([amanjain97](https://github.com/amanjain97))
+- Improve README.md [\#1361](https://github.com/grpc-ecosystem/grpc-gateway/pull/1361) ([amanjain97](https://github.com/amanjain97))
+- Fix typo in CONTRIBUTING.md [\#1360](https://github.com/grpc-ecosystem/grpc-gateway/pull/1360) ([amanjain97](https://github.com/amanjain97))
+- improved customizingyourgateway.md [\#1359](https://github.com/grpc-ecosystem/grpc-gateway/pull/1359) ([iamrajiv](https://github.com/iamrajiv))
+- Update golang Docker tag to v1.14.3 \(master\) [\#1354](https://github.com/grpc-ecosystem/grpc-gateway/pull/1354) ([renovate[bot]](https://github.com/apps/renovate))
+- Globally ignore jekyll updates [\#1347](https://github.com/grpc-ecosystem/grpc-gateway/pull/1347) ([johanbrandhorst](https://github.com/johanbrandhorst))
+- Further renovate tweaks [\#1345](https://github.com/grpc-ecosystem/grpc-gateway/pull/1345) ([johanbrandhorst](https://github.com/johanbrandhorst))
+- Attempt to ignore golang/protobuf updates on master [\#1338](https://github.com/grpc-ecosystem/grpc-gateway/pull/1338) ([johanbrandhorst](https://github.com/johanbrandhorst))
+- docs: add example customizing unmarshal options [\#1335](https://github.com/grpc-ecosystem/grpc-gateway/pull/1335) ([srenatus](https://github.com/srenatus))
+- Renovate: run go mod tidy after updates [\#1323](https://github.com/grpc-ecosystem/grpc-gateway/pull/1323) ([johanbrandhorst](https://github.com/johanbrandhorst))
+- Update google.golang.org/genproto commit hash to 09dca8e \(master\) [\#1321](https://github.com/grpc-ecosystem/grpc-gateway/pull/1321) ([renovate[bot]](https://github.com/apps/renovate))
+- fixed typo and grammar in docs/\_docs/usage.md [\#1318](https://github.com/grpc-ecosystem/grpc-gateway/pull/1318) ([iamrajiv](https://github.com/iamrajiv))
+- improved docs/\_docs/season\_of\_docs.md [\#1317](https://github.com/grpc-ecosystem/grpc-gateway/pull/1317) ([iamrajiv](https://github.com/iamrajiv))
+- Add bazel CI caching [\#1312](https://github.com/grpc-ecosystem/grpc-gateway/pull/1312) ([johanbrandhorst](https://github.com/johanbrandhorst))
+- Update module antihax/optional to v1 \(master\) [\#1296](https://github.com/grpc-ecosystem/grpc-gateway/pull/1296) ([renovate[bot]](https://github.com/apps/renovate))
+- Update dependency com\_github\_bazelbuild\_buildtools to v3 \(master\) [\#1295](https://github.com/grpc-ecosystem/grpc-gateway/pull/1295) ([renovate[bot]](https://github.com/apps/renovate))
+- Update module google.golang.org/grpc to v1.29.1 \(master\) [\#1294](https://github.com/grpc-ecosystem/grpc-gateway/pull/1294) ([renovate[bot]](https://github.com/apps/renovate))
+- Update golang Docker tag to v1.14.2 \(master\) [\#1292](https://github.com/grpc-ecosystem/grpc-gateway/pull/1292) ([renovate[bot]](https://github.com/apps/renovate))
+- Update dependency io\_bazel\_rules\_go to v0.22.4 \(master\) [\#1288](https://github.com/grpc-ecosystem/grpc-gateway/pull/1288) ([renovate[bot]](https://github.com/apps/renovate))
+- Update dependency com\_github\_bazelbuild\_buildtools to v0.29.0 \(master\) [\#1287](https://github.com/grpc-ecosystem/grpc-gateway/pull/1287) ([renovate[bot]](https://github.com/apps/renovate))
+- Update dependency bazel\_gazelle to v0.20.0 \(master\) [\#1286](https://github.com/grpc-ecosystem/grpc-gateway/pull/1286) ([renovate[bot]](https://github.com/apps/renovate))
+- Update google.golang.org/genproto commit hash to 43844f6 \(master\) [\#1285](https://github.com/grpc-ecosystem/grpc-gateway/pull/1285) ([renovate[bot]](https://github.com/apps/renovate))
+- Move renovate.json back to root [\#1284](https://github.com/grpc-ecosystem/grpc-gateway/pull/1284) ([johanbrandhorst](https://github.com/johanbrandhorst))
+- Configure Renovate to run on master and v2 [\#1281](https://github.com/grpc-ecosystem/grpc-gateway/pull/1281) ([johanbrandhorst](https://github.com/johanbrandhorst))
+- Update golang.org/x/oauth2 commit hash to bf48bf1 [\#1279](https://github.com/grpc-ecosystem/grpc-gateway/pull/1279) ([renovate[bot]](https://github.com/apps/renovate))
+- Add more instructions on the GitHub releases UI [\#1276](https://github.com/grpc-ecosystem/grpc-gateway/pull/1276) ([achew22](https://github.com/achew22))
+- Configure Renovate [\#1275](https://github.com/grpc-ecosystem/grpc-gateway/pull/1275) ([renovate[bot]](https://github.com/apps/renovate))
+
+## [v1.14.5](https://github.com/grpc-ecosystem/grpc-gateway/tree/v1.14.5) (2020-05-07)
+[Full Changelog](https://github.com/grpc-ecosystem/grpc-gateway/compare/v2.0.0-alpha.2...v1.14.5)
+
+**Fixed bugs:**
+
+- Regeneration commands don't regenerate all files [\#1229](https://github.com/grpc-ecosystem/grpc-gateway/issues/1229)
+
+**Closed issues:**
+
+- bug in protoc-gen-swagger with put method and field\_mask [\#1271](https://github.com/grpc-ecosystem/grpc-gateway/issues/1271)
+- How to change title and version in generated swagger json file [\#1269](https://github.com/grpc-ecosystem/grpc-gateway/issues/1269)
+- Error when using oneof name in response body selector [\#1264](https://github.com/grpc-ecosystem/grpc-gateway/issues/1264)
+- httpbody.proto has incorrect go\_package [\#1263](https://github.com/grpc-ecosystem/grpc-gateway/issues/1263)
+- How to implement field validation for optional parameter [\#1256](https://github.com/grpc-ecosystem/grpc-gateway/issues/1256)
+- HTTP GET with query params error [\#1245](https://github.com/grpc-ecosystem/grpc-gateway/issues/1245)
+- how to get customezing header [\#1244](https://github.com/grpc-ecosystem/grpc-gateway/issues/1244)
+- proto function not define in yaml then grpc-gateway\_out err [\#1233](https://github.com/grpc-ecosystem/grpc-gateway/issues/1233)
+- ll [\#1232](https://github.com/grpc-ecosystem/grpc-gateway/issues/1232)
+- Add WithUnmarshaler NewServeMux option. [\#1226](https://github.com/grpc-ecosystem/grpc-gateway/issues/1226)
+- Feature request: Reject call if there are parameters/fields that don't exist in the protobuf [\#1210](https://github.com/grpc-ecosystem/grpc-gateway/issues/1210)
+- Migrate away from using the protoc-gen-go/generator package [\#1209](https://github.com/grpc-ecosystem/grpc-gateway/issues/1209)
+- Swagger doc generation got stuck for infinite time if a message refers itself. [\#1167](https://github.com/grpc-ecosystem/grpc-gateway/issues/1167)
+- Remove "error" field from errors. [\#1098](https://github.com/grpc-ecosystem/grpc-gateway/issues/1098)
+
+**Merged pull requests:**
+
+- Generate release notes for 1.14.5 [\#1270](https://github.com/grpc-ecosystem/grpc-gateway/pull/1270) ([achew22](https://github.com/achew22))
+- protoc-gen-swagger, Fix for infinite loop on circular references in query parameters  [\#1266](https://github.com/grpc-ecosystem/grpc-gateway/pull/1266) ([Romeren](https://github.com/Romeren))
+- Remove uses of protoc-gen-go/generator [\#1260](https://github.com/grpc-ecosystem/grpc-gateway/pull/1260) ([johanbrandhorst](https://github.com/johanbrandhorst))
+- Use public key to authenticate for docker registry [\#1259](https://github.com/grpc-ecosystem/grpc-gateway/pull/1259) ([johanbrandhorst](https://github.com/johanbrandhorst))
+- Add Chef and Scaleway to ADOPTERS.md [\#1255](https://github.com/grpc-ecosystem/grpc-gateway/pull/1255) ([johanbrandhorst](https://github.com/johanbrandhorst))
+- Add user testimonials and ADOPTERS.md [\#1250](https://github.com/grpc-ecosystem/grpc-gateway/pull/1250) ([johanbrandhorst](https://github.com/johanbrandhorst))
+- Remove duplicate regeneration documentation [\#1248](https://github.com/grpc-ecosystem/grpc-gateway/pull/1248) ([johanbrandhorst](https://github.com/johanbrandhorst))
+- Change build env to git repo package [\#1246](https://github.com/grpc-ecosystem/grpc-gateway/pull/1246) ([johanbrandhorst](https://github.com/johanbrandhorst))
+- Move section about google protobufs [\#1241](https://github.com/grpc-ecosystem/grpc-gateway/pull/1241) ([thecodejunkie](https://github.com/thecodejunkie))
+- Fix generating helloworld.proto [\#1230](https://github.com/grpc-ecosystem/grpc-gateway/pull/1230) ([johanbrandhorst](https://github.com/johanbrandhorst))
+- Fix testproto generation, add to CI [\#1221](https://github.com/grpc-ecosystem/grpc-gateway/pull/1221) ([johanbrandhorst](https://github.com/johanbrandhorst))
+- docs: fix some broken links and change godoc.org links to pkg.go.dev [\#1219](https://github.com/grpc-ecosystem/grpc-gateway/pull/1219) ([AyushG3112](https://github.com/AyushG3112))
+- Add season of docs project ideas page [\#1214](https://github.com/grpc-ecosystem/grpc-gateway/pull/1214) ([johanbrandhorst](https://github.com/johanbrandhorst))
+- remove deprecated usage of github.com/golang/protobuf/protoc-gen-go/generator [\#1213](https://github.com/grpc-ecosystem/grpc-gateway/pull/1213) ([yinzara](https://github.com/yinzara))
+- fix query params for invoked in-process local request [\#1212](https://github.com/grpc-ecosystem/grpc-gateway/pull/1212) ([hb-chen](https://github.com/hb-chen))
+
+## [v2.0.0-alpha.2](https://github.com/grpc-ecosystem/grpc-gateway/tree/v2.0.0-alpha.2) (2020-04-18)
+[Full Changelog](https://github.com/grpc-ecosystem/grpc-gateway/compare/v2.0.0-alpha.1...v2.0.0-alpha.2)
+
+## [v2.0.0-alpha.1](https://github.com/grpc-ecosystem/grpc-gateway/tree/v2.0.0-alpha.1) (2020-04-18)
+[Full Changelog](https://github.com/grpc-ecosystem/grpc-gateway/compare/v1.14.4...v2.0.0-alpha.1)
+
+## [v1.14.4](https://github.com/grpc-ecosystem/grpc-gateway/tree/v1.14.4) (2020-04-18)
+[Full Changelog](https://github.com/grpc-ecosystem/grpc-gateway/compare/v1.14.4-rc.1...v1.14.4)
+
+**Closed issues:**
+
+- custom unmarshal response error [\#1211](https://github.com/grpc-ecosystem/grpc-gateway/issues/1211)
+- api annotation placeholder character case [\#1207](https://github.com/grpc-ecosystem/grpc-gateway/issues/1207)
+- response\_body of http rule is ignored in case of server streaming [\#1202](https://github.com/grpc-ecosystem/grpc-gateway/issues/1202)
+- Go gRPC Gateway - Type of one field in JSON is not same as in proto [\#1201](https://github.com/grpc-ecosystem/grpc-gateway/issues/1201)
+- 1.14 breaks protoc-gen-go-json [\#1199](https://github.com/grpc-ecosystem/grpc-gateway/issues/1199)
+- Use different field name in gateway [\#1197](https://github.com/grpc-ecosystem/grpc-gateway/issues/1197)
+- No longer generate register...Server function in pb.gw.go? [\#1195](https://github.com/grpc-ecosystem/grpc-gateway/issues/1195)
+- Support for source\_relative argument [\#1180](https://github.com/grpc-ecosystem/grpc-gateway/issues/1180)
+
+**Merged pull requests:**
+
+- Generate changelog for 1.14.4 [\#1217](https://github.com/grpc-ecosystem/grpc-gateway/pull/1217) ([johanbrandhorst](https://github.com/johanbrandhorst))
+- Add option to disable new operationID generation [\#1216](https://github.com/grpc-ecosystem/grpc-gateway/pull/1216) ([johanbrandhorst](https://github.com/johanbrandhorst))
+- Misc docs changes [\#1215](https://github.com/grpc-ecosystem/grpc-gateway/pull/1215) ([johanbrandhorst](https://github.com/johanbrandhorst))
+- http rule's response\_body support to stream rpc [\#1208](https://github.com/grpc-ecosystem/grpc-gateway/pull/1208) ([adasari](https://github.com/adasari))
+- Add GopherCon UK link to README [\#1204](https://github.com/grpc-ecosystem/grpc-gateway/pull/1204) ([johanbrandhorst](https://github.com/johanbrandhorst))
+- Move codegenerator back to public namespace [\#1200](https://github.com/grpc-ecosystem/grpc-gateway/pull/1200) ([johanbrandhorst](https://github.com/johanbrandhorst))
+
+## [v1.14.4-rc.1](https://github.com/grpc-ecosystem/grpc-gateway/tree/v1.14.4-rc.1) (2020-04-01)
+[Full Changelog](https://github.com/grpc-ecosystem/grpc-gateway/compare/v1.14.3...v1.14.4-rc.1)
+
+**Implemented enhancements:**
+
+- proto-gen-\* --version [\#649](https://github.com/grpc-ecosystem/grpc-gateway/issues/649)
+
+**Closed issues:**
+
+- protoc-gen-swagger: json\_names\_for\_fields=true does not respect json\_name for \*nested\* path parameters [\#1187](https://github.com/grpc-ecosystem/grpc-gateway/issues/1187)
+- protoc-gen-grpc-gateway-ts plugin for generating Typescript types [\#1182](https://github.com/grpc-ecosystem/grpc-gateway/issues/1182)
+- protoc-gen-swagger: support outputting enum parameters as integers [\#1177](https://github.com/grpc-ecosystem/grpc-gateway/issues/1177)
+- protoc-gen-grpc-gateway should warn or fail if a selector does not exist [\#1175](https://github.com/grpc-ecosystem/grpc-gateway/issues/1175)
+- Enum string values not supported by grpc gateway [\#1171](https://github.com/grpc-ecosystem/grpc-gateway/issues/1171)
+- Swagger definition is broken if there's no default error response set [\#1162](https://github.com/grpc-ecosystem/grpc-gateway/issues/1162)
+- Using golang/protobuf v1.4.0-rc.3 locks up generators [\#1158](https://github.com/grpc-ecosystem/grpc-gateway/issues/1158)
+
+**Merged pull requests:**
+
+- Generate changelog for 1.14.4-rc.1 [\#1194](https://github.com/grpc-ecosystem/grpc-gateway/pull/1194) ([johanbrandhorst](https://github.com/johanbrandhorst))
+- Generate Swagger with Unique Operation IDs [\#1193](https://github.com/grpc-ecosystem/grpc-gateway/pull/1193) ([dadgar](https://github.com/dadgar))
+- Xin/support deep levels reserved json name [\#1191](https://github.com/grpc-ecosystem/grpc-gateway/pull/1191) ([xin-au](https://github.com/xin-au))
+- feat: add enumAsInts flag [\#1186](https://github.com/grpc-ecosystem/grpc-gateway/pull/1186) ([rowe0x](https://github.com/rowe0x))
+- Use 8088 instead of 8080 in integration test. [\#1184](https://github.com/grpc-ecosystem/grpc-gateway/pull/1184) ([drigz](https://github.com/drigz))
+- Limit Bazel memory usage in CI. [\#1183](https://github.com/grpc-ecosystem/grpc-gateway/pull/1183) ([drigz](https://github.com/drigz))
+- fix version spelling [\#1181](https://github.com/grpc-ecosystem/grpc-gateway/pull/1181) ([seriousben](https://github.com/seriousben))
+- Emit error on HTTP rules without a matching selector and log warning on unbound methods [\#1178](https://github.com/grpc-ecosystem/grpc-gateway/pull/1178) ([andrascz](https://github.com/andrascz))
+- genswagger: don't emit default response if there's no Error definition [\#1166](https://github.com/grpc-ecosystem/grpc-gateway/pull/1166) ([utrack](https://github.com/utrack))
+
+## [v1.14.3](https://github.com/grpc-ecosystem/grpc-gateway/tree/v1.14.3) (2020-03-11)
+[Full Changelog](https://github.com/grpc-ecosystem/grpc-gateway/compare/v1.14.2...v1.14.3)
+
+**Closed issues:**
+
+- Missing httprule breaks our module [\#1168](https://github.com/grpc-ecosystem/grpc-gateway/issues/1168)
+
+**Merged pull requests:**
+
+- Generate changelog for 1.14.3 [\#1170](https://github.com/grpc-ecosystem/grpc-gateway/pull/1170) ([johanbrandhorst](https://github.com/johanbrandhorst))
+- Move httprule back into the public API [\#1169](https://github.com/grpc-ecosystem/grpc-gateway/pull/1169) ([johanbrandhorst](https://github.com/johanbrandhorst))
+
+## [v1.14.2](https://github.com/grpc-ecosystem/grpc-gateway/tree/v1.14.2) (2020-03-09)
+[Full Changelog](https://github.com/grpc-ecosystem/grpc-gateway/compare/v1.14.1...v1.14.2)
+
+**Closed issues:**
+
+- 1.14.x breaks clay [\#1161](https://github.com/grpc-ecosystem/grpc-gateway/issues/1161)
+- Enum string values not supported by grpc gateway [\#1159](https://github.com/grpc-ecosystem/grpc-gateway/issues/1159)
+- Path parameters visible in the body of the request [\#1157](https://github.com/grpc-ecosystem/grpc-gateway/issues/1157)
+- 1.14.0 breaks existing pipelines [\#1154](https://github.com/grpc-ecosystem/grpc-gateway/issues/1154)
+
+**Merged pull requests:**
+
+- Generate changelog for 1.14.2 [\#1164](https://github.com/grpc-ecosystem/grpc-gateway/pull/1164) ([johanbrandhorst](https://github.com/johanbrandhorst))
+- Move genswagger to public API again [\#1163](https://github.com/grpc-ecosystem/grpc-gateway/pull/1163) ([johanbrandhorst](https://github.com/johanbrandhorst))
+
+## [v1.14.1](https://github.com/grpc-ecosystem/grpc-gateway/tree/v1.14.1) (2020-03-05)
+[Full Changelog](https://github.com/grpc-ecosystem/grpc-gateway/compare/v1.14.0...v1.14.1)
+
+**Merged pull requests:**
+
+- Generate changelog for 1.14.1 [\#1156](https://github.com/grpc-ecosystem/grpc-gateway/pull/1156) ([johanbrandhorst](https://github.com/johanbrandhorst))
+- Move generator and descriptor back to public API [\#1155](https://github.com/grpc-ecosystem/grpc-gateway/pull/1155) ([johanbrandhorst](https://github.com/johanbrandhorst))
+- Update build environment to 1.14 [\#1153](https://github.com/grpc-ecosystem/grpc-gateway/pull/1153) ([johanbrandhorst](https://github.com/johanbrandhorst))
+- Add gorelease CI step [\#1152](https://github.com/grpc-ecosystem/grpc-gateway/pull/1152) ([johanbrandhorst](https://github.com/johanbrandhorst))
+
+## [v1.14.0](https://github.com/grpc-ecosystem/grpc-gateway/tree/v1.14.0) (2020-03-04)
+[Full Changelog](https://github.com/grpc-ecosystem/grpc-gateway/compare/v1.13.0...v1.14.0)
+
+**Closed issues:**
+
+- Swagger Codegen With Multiple Additional Bindings is resulting in missing Documentation [\#1149](https://github.com/grpc-ecosystem/grpc-gateway/issues/1149)
+- google.api.http option not picked up/mapped correctly? [\#1148](https://github.com/grpc-ecosystem/grpc-gateway/issues/1148)
+- cannot use multiple different error handlers in one gateway binary [\#1143](https://github.com/grpc-ecosystem/grpc-gateway/issues/1143)
+- Is grpc-gateway a stateless application? [\#1139](https://github.com/grpc-ecosystem/grpc-gateway/issues/1139)
+- Support for custom query parameters parsers [\#1128](https://github.com/grpc-ecosystem/grpc-gateway/issues/1128)
+
+**Merged pull requests:**
+
+- Generate changelog for 1.14.0 [\#1151](https://github.com/grpc-ecosystem/grpc-gateway/pull/1151) ([johanbrandhorst](https://github.com/johanbrandhorst))
+- Use an interface for ContentTypeFromMessage [\#1150](https://github.com/grpc-ecosystem/grpc-gateway/pull/1150) ([wtlangford](https://github.com/wtlangford))
+- Minimize API surface in anticipation of gorelease [\#1146](https://github.com/grpc-ecosystem/grpc-gateway/pull/1146) ([johanbrandhorst](https://github.com/johanbrandhorst))
+- Fix \#1143: Support multiple error handlers. [\#1144](https://github.com/grpc-ecosystem/grpc-gateway/pull/1144) ([jgiles](https://github.com/jgiles))
+-  Fix customizing your gateway documentation CustomMatcher example [\#1142](https://github.com/grpc-ecosystem/grpc-gateway/pull/1142) ([wiliamsouza](https://github.com/wiliamsouza))
+- protoc-gen-swagger: add flag to disable default errors [\#1141](https://github.com/grpc-ecosystem/grpc-gateway/pull/1141) ([johanbrandhorst](https://github.com/johanbrandhorst))
+- Bump nokogiri from 1.10.4 to 1.10.8 in /docs [\#1140](https://github.com/grpc-ecosystem/grpc-gateway/pull/1140) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Configurable query parameters parser [\#1138](https://github.com/grpc-ecosystem/grpc-gateway/pull/1138) ([wp0pw](https://github.com/wp0pw))
+- Improve installation instructions [\#1132](https://github.com/grpc-ecosystem/grpc-gateway/pull/1132) ([johanbrandhorst](https://github.com/johanbrandhorst))
+- Add bazel gazelle to CONTRIBUTING [\#1131](https://github.com/grpc-ecosystem/grpc-gateway/pull/1131) ([johanbrandhorst](https://github.com/johanbrandhorst))
+- Configure response content type at the method level [\#1130](https://github.com/grpc-ecosystem/grpc-gateway/pull/1130) ([nboukeffa](https://github.com/nboukeffa))
+
+## [v1.13.0](https://github.com/grpc-ecosystem/grpc-gateway/tree/v1.13.0) (2020-02-11)
+[Full Changelog](https://github.com/grpc-ecosystem/grpc-gateway/compare/v1.12.2...v1.13.0)
+
+**Implemented enhancements:**
+
+- \[Feature Request\] Custom Type conversion [\#754](https://github.com/grpc-ecosystem/grpc-gateway/issues/754)
+- protoc-gen-swagger: add default error response [\#1127](https://github.com/grpc-ecosystem/grpc-gateway/pull/1127) ([johanbrandhorst](https://github.com/johanbrandhorst))
+
+**Closed issues:**
+
+- swagger: Prefix used in nested-field GET params does not respect json\_names\_for\_fields [\#1125](https://github.com/grpc-ecosystem/grpc-gateway/issues/1125)
+- Generated spec missing grpc errors [\#1122](https://github.com/grpc-ecosystem/grpc-gateway/issues/1122)
+- protoc-gen-swagger: Support for repeated custom message in url params [\#1119](https://github.com/grpc-ecosystem/grpc-gateway/issues/1119)
+- protoc-gen-swagger: Support Response-specific examples  [\#1117](https://github.com/grpc-ecosystem/grpc-gateway/issues/1117)
+
+**Merged pull requests:**
+
+- Generate changelog for 1.13.0 [\#1129](https://github.com/grpc-ecosystem/grpc-gateway/pull/1129) ([johanbrandhorst](https://github.com/johanbrandhorst))
+- Fix \#1125: JSON-prefix nested-field params. [\#1126](https://github.com/grpc-ecosystem/grpc-gateway/pull/1126) ([jgiles](https://github.com/jgiles))
+- Fix \#1117: Support response examples. [\#1124](https://github.com/grpc-ecosystem/grpc-gateway/pull/1124) ([jgiles](https://github.com/jgiles))
+
+## [v1.12.2](https://github.com/grpc-ecosystem/grpc-gateway/tree/v1.12.2) (2020-01-22)
+[Full Changelog](https://github.com/grpc-ecosystem/grpc-gateway/compare/v1.12.1...v1.12.2)
+
+**Fixed bugs:**
+
+- Gateway does not parse oneof types correctly when using camelCase [\#1113](https://github.com/grpc-ecosystem/grpc-gateway/issues/1113)
+
+**Closed issues:**
+
+- all SubConns are in TransientFailure, latest connection error: connection error: desc = \"transport: Error while dialing dial tcp \[::1\]:50051: connect: connection refused\" [\#1111](https://github.com/grpc-ecosystem/grpc-gateway/issues/1111)
+- Streaming responses are put in `x-stream-definitions` rather than `/components/schema`, which tools do not support [\#1109](https://github.com/grpc-ecosystem/grpc-gateway/issues/1109)
+- Why is metadataAnnotators not \[\]func\(metadata.MD, \*http.Request\) [\#1107](https://github.com/grpc-ecosystem/grpc-gateway/issues/1107)
+- protoc\_gen\_swagger: Why `protobufListValue` type is represented as object? [\#1106](https://github.com/grpc-ecosystem/grpc-gateway/issues/1106)
+- The metadata of local\_request function's return is always nil [\#1105](https://github.com/grpc-ecosystem/grpc-gateway/issues/1105)
+- protoc-gen-swagger: support multiple files [\#1104](https://github.com/grpc-ecosystem/grpc-gateway/issues/1104)
+- grpc-gateway is incompatible with --incompatible\_load\_proto\_rules\_from\_bzl [\#1101](https://github.com/grpc-ecosystem/grpc-gateway/issues/1101)
+- Any example or doc of sending large data from Postman \(json\) to the server using client side streaming? [\#1100](https://github.com/grpc-ecosystem/grpc-gateway/issues/1100)
+- Generate java grpc gateway code. [\#1097](https://github.com/grpc-ecosystem/grpc-gateway/issues/1097)
+-  protoc-gen-swagger gen unsupport  http post  in query,  only support http get in query? [\#1096](https://github.com/grpc-ecosystem/grpc-gateway/issues/1096)
+- Cannot generate swagger with generated protobuf [\#1094](https://github.com/grpc-ecosystem/grpc-gateway/issues/1094)
+- genswagger fails on Ubuntu on Windows \(WSL\): value of type genswagger.alias is not assignable to type genswagger.alias [\#1092](https://github.com/grpc-ecosystem/grpc-gateway/issues/1092)
+- protoc-gen-swagger: should use json\_name values for generating properties in swagger doc [\#1090](https://github.com/grpc-ecosystem/grpc-gateway/issues/1090)
+- protoc-gen-swagger: json\_names\_for\_fields=true does not respect json\_name for path parameters [\#1084](https://github.com/grpc-ecosystem/grpc-gateway/issues/1084)
+- extract protoc-gen-swagger to separate repo [\#1083](https://github.com/grpc-ecosystem/grpc-gateway/issues/1083)
+-  How do I load balance call grpc service? [\#1081](https://github.com/grpc-ecosystem/grpc-gateway/issues/1081)
+
+**Merged pull requests:**
+
+- Generate changelog for 1.12.2 [\#1120](https://github.com/grpc-ecosystem/grpc-gateway/pull/1120) ([johanbrandhorst](https://github.com/johanbrandhorst))
+- docs: require Jekyll Github Token to be set [\#1118](https://github.com/grpc-ecosystem/grpc-gateway/pull/1118) ([johanbrandhorst](https://github.com/johanbrandhorst))
+- fix: protoc-gen-swagger: get wrong second services method comments [\#1116](https://github.com/grpc-ecosystem/grpc-gateway/pull/1116) ([chinaran](https://github.com/chinaran))
+- Bump rubyzip from 1.2.3 to 2.0.0 in /docs [\#1115](https://github.com/grpc-ecosystem/grpc-gateway/pull/1115) ([dependabot[bot]](https://github.com/apps/dependabot))
+- \#1113 Fix broken parsing of camelCase oneof [\#1114](https://github.com/grpc-ecosystem/grpc-gateway/pull/1114) ([seanlaff](https://github.com/seanlaff))
+- \#1109 Inline streamingDefinitions in generated swagger to better support codegen tools [\#1112](https://github.com/grpc-ecosystem/grpc-gateway/pull/1112) ([seanlaff](https://github.com/seanlaff))
+- Explicitly load rules\_proto rules [\#1102](https://github.com/grpc-ecosystem/grpc-gateway/pull/1102) ([achew22](https://github.com/achew22))
+- \[bazel\] Correctly handle proto files under \_virtual\_imports [\#1095](https://github.com/grpc-ecosystem/grpc-gateway/pull/1095) ([Yannic](https://github.com/Yannic))
+- Override operation\_id when available [\#1091](https://github.com/grpc-ecosystem/grpc-gateway/pull/1091) ([guilherme-santos](https://github.com/guilherme-santos))
+- Support reserved json name and add tests [\#1085](https://github.com/grpc-ecosystem/grpc-gateway/pull/1085) ([xin-au](https://github.com/xin-au))
+
+## [v1.12.1](https://github.com/grpc-ecosystem/grpc-gateway/tree/v1.12.1) (2019-11-06)
+[Full Changelog](https://github.com/grpc-ecosystem/grpc-gateway/compare/v1.12.0...v1.12.1)
+
+**Closed issues:**
+
+- Unable to create HTTP mapping with "/parent" [\#1079](https://github.com/grpc-ecosystem/grpc-gateway/issues/1079)
+
+**Merged pull requests:**
+
+- Generate changelog for 1.12.1 [\#1080](https://github.com/grpc-ecosystem/grpc-gateway/pull/1080) ([johanbrandhorst](https://github.com/johanbrandhorst))
+- Revert "Fix templateToSwaggerPath generates invalid path" [\#1078](https://github.com/grpc-ecosystem/grpc-gateway/pull/1078) ([johanbrandhorst](https://github.com/johanbrandhorst))
+- Support json\_names\_for\_fields in starlark rule protoc\_gen\_swagger [\#1077](https://github.com/grpc-ecosystem/grpc-gateway/pull/1077) ([prestonvanloon](https://github.com/prestonvanloon))
+
+## [v1.12.0](https://github.com/grpc-ecosystem/grpc-gateway/tree/v1.12.0) (2019-11-04)
+[Full Changelog](https://github.com/grpc-ecosystem/grpc-gateway/compare/v1.11.3...v1.12.0)
+
+**Implemented enhancements:**
+
+- protoc-gen-swagger: support generating a Swagger definition with no schemes [\#1069](https://github.com/grpc-ecosystem/grpc-gateway/issues/1069)
+
+**Fixed bugs:**
+
+- "make test" fails with go mod error [\#895](https://github.com/grpc-ecosystem/grpc-gateway/issues/895)
+
+**Closed issues:**
+
+- jfbrandhorst/grpc-gateway-build-env image can't run on Windows [\#1073](https://github.com/grpc-ecosystem/grpc-gateway/issues/1073)
+- EOF is received after one request [\#1071](https://github.com/grpc-ecosystem/grpc-gateway/issues/1071)
+- grpc-ecosystem/grpc-gateway/third\_party/googleapis: warning: directory does not exist. [\#1068](https://github.com/grpc-ecosystem/grpc-gateway/issues/1068)
+- third\_party/googleapis is missing from package [\#1065](https://github.com/grpc-ecosystem/grpc-gateway/issues/1065)
+- handleForwardResponseOptions not called by DefaultHTTPError [\#1064](https://github.com/grpc-ecosystem/grpc-gateway/issues/1064)
+- why marshal enum to json using string but received it with int . [\#1063](https://github.com/grpc-ecosystem/grpc-gateway/issues/1063)
+- protoc-gen-swagger/genswagger does not build on go1.11 and earlier versions [\#1061](https://github.com/grpc-ecosystem/grpc-gateway/issues/1061)
+- How to support custom output, implementation [\#1055](https://github.com/grpc-ecosystem/grpc-gateway/issues/1055)
+
+**Merged pull requests:**
+
+- Generate changelog for 1.12.0 [\#1076](https://github.com/grpc-ecosystem/grpc-gateway/pull/1076) ([johanbrandhorst](https://github.com/johanbrandhorst))
+- Support creating a Swagger def with no schemes [\#1075](https://github.com/grpc-ecosystem/grpc-gateway/pull/1075) ([ailurarctos](https://github.com/ailurarctos))
+- Update dockerfile and regenerate files [\#1074](https://github.com/grpc-ecosystem/grpc-gateway/pull/1074) ([johanbrandhorst](https://github.com/johanbrandhorst))
+- annotations: Sort import order. [\#1072](https://github.com/grpc-ecosystem/grpc-gateway/pull/1072) ([someone1](https://github.com/someone1))
+- fix\(protoc-gen-swagger\): Windows compatibility [\#1070](https://github.com/grpc-ecosystem/grpc-gateway/pull/1070) ([mrmeku](https://github.com/mrmeku))
+- adding build-scoping for builds on earlier go versions \(\<1.12\) [\#1062](https://github.com/grpc-ecosystem/grpc-gateway/pull/1062) ([marcusljx](https://github.com/marcusljx))
+- Add back bzip2 to image [\#1060](https://github.com/grpc-ecosystem/grpc-gateway/pull/1060) ([johanbrandhorst](https://github.com/johanbrandhorst))
+- Swagger 2.4.8 [\#1058](https://github.com/grpc-ecosystem/grpc-gateway/pull/1058) ([zachgersh](https://github.com/zachgersh))
+- get bazel deps back in right spot [\#1057](https://github.com/grpc-ecosystem/grpc-gateway/pull/1057) ([zachgersh](https://github.com/zachgersh))
+- use Go templates in protofile comments [\#1056](https://github.com/grpc-ecosystem/grpc-gateway/pull/1056) ([Jeremytjuh](https://github.com/Jeremytjuh))
+- Bump generators Dockerfile to 1.13.1 [\#1054](https://github.com/grpc-ecosystem/grpc-gateway/pull/1054) ([johanbrandhorst](https://github.com/johanbrandhorst))
+- Updates grpc proto deps [\#1053](https://github.com/grpc-ecosystem/grpc-gateway/pull/1053) ([zachgersh](https://github.com/zachgersh))
+
+## [v1.11.3](https://github.com/grpc-ecosystem/grpc-gateway/tree/v1.11.3) (2019-09-30)
+[Full Changelog](https://github.com/grpc-ecosystem/grpc-gateway/compare/v1.11.2...v1.11.3)
+
+**Closed issues:**
+
+- json Custom output support \(with examples\) [\#1051](https://github.com/grpc-ecosystem/grpc-gateway/issues/1051)
+- Question: Override TransientFailure error with friendlier response [\#1047](https://github.com/grpc-ecosystem/grpc-gateway/issues/1047)
+- Wrong codes generated when nested enum in path  [\#1017](https://github.com/grpc-ecosystem/grpc-gateway/issues/1017)
+
+**Merged pull requests:**
+
+- Generate changelog for 1.11.3 [\#1052](https://github.com/grpc-ecosystem/grpc-gateway/pull/1052) ([johanbrandhorst](https://github.com/johanbrandhorst))
+- Support json names in field mask generation [\#1050](https://github.com/grpc-ecosystem/grpc-gateway/pull/1050) ([william-plano-oxb](https://github.com/william-plano-oxb))
+- Fix auto generated fieldmask case in patch requests [\#1049](https://github.com/grpc-ecosystem/grpc-gateway/pull/1049) ([william-plano-oxb](https://github.com/william-plano-oxb))
+- Pass nested enum values through properly when used as url parameters [\#1048](https://github.com/grpc-ecosystem/grpc-gateway/pull/1048) ([mnito](https://github.com/mnito))
+
+## [v1.11.2](https://github.com/grpc-ecosystem/grpc-gateway/tree/v1.11.2) (2019-09-20)
+[Full Changelog](https://github.com/grpc-ecosystem/grpc-gateway/compare/v1.11.1...v1.11.2)
+
+**Implemented enhancements:**
+
+- Support specifying servers in the swagger generator [\#891](https://github.com/grpc-ecosystem/grpc-gateway/issues/891)
+
+**Fixed bugs:**
+
+- Make protoc-gen-swagger build on 1.11 [\#1044](https://github.com/grpc-ecosystem/grpc-gateway/issues/1044)
+- jsonpb panics when using numbers for parsing timestamps [\#1025](https://github.com/grpc-ecosystem/grpc-gateway/issues/1025)
+
+**Closed issues:**
+
+- Interceptors not called when using new RegisterHandler function [\#1043](https://github.com/grpc-ecosystem/grpc-gateway/issues/1043)
+- How to use -grpc-gateway\_out sp that the result is in a specific folder? [\#1042](https://github.com/grpc-ecosystem/grpc-gateway/issues/1042)
+- Is there any way to let json int32 can not accept string in grpc-gateway? [\#1029](https://github.com/grpc-ecosystem/grpc-gateway/issues/1029)
+- Go integration tests are somewhat flaky [\#992](https://github.com/grpc-ecosystem/grpc-gateway/issues/992)
+
+**Merged pull requests:**
+
+- Generate changelog for 1.11.2 [\#1045](https://github.com/grpc-ecosystem/grpc-gateway/pull/1045) ([johanbrandhorst](https://github.com/johanbrandhorst))
+- Remove "make test" recommendation from CONTRIBUTING.md [\#1040](https://github.com/grpc-ecosystem/grpc-gateway/pull/1040) ([johanbrandhorst](https://github.com/johanbrandhorst))
+- examples/integration: wait for secondary gateway [\#1039](https://github.com/grpc-ecosystem/grpc-gateway/pull/1039) ([srenatus](https://github.com/srenatus))
+- Update README.md [\#1038](https://github.com/grpc-ecosystem/grpc-gateway/pull/1038) ([piengeng](https://github.com/piengeng))
+- Configure stale\[bot\] [\#1036](https://github.com/grpc-ecosystem/grpc-gateway/pull/1036) ([achew22](https://github.com/achew22))
+- added additional info for custom http headers [\#1035](https://github.com/grpc-ecosystem/grpc-gateway/pull/1035) ([cemenson](https://github.com/cemenson))
+- protoc-gen-swagger: add support for arbitrary extensions [\#1033](https://github.com/grpc-ecosystem/grpc-gateway/pull/1033) ([srenatus](https://github.com/srenatus))
+- nitpick spacing in other proto files [\#1032](https://github.com/grpc-ecosystem/grpc-gateway/pull/1032) ([srenatus](https://github.com/srenatus))
+- nitpick a\_bit\_of\_everything.proto [\#1030](https://github.com/grpc-ecosystem/grpc-gateway/pull/1030) ([srenatus](https://github.com/srenatus))
+- runtime: stop using nil ponters with Unmarshal [\#1028](https://github.com/grpc-ecosystem/grpc-gateway/pull/1028) ([johanbrandhorst](https://github.com/johanbrandhorst))
+- Small performance fix [\#1027](https://github.com/grpc-ecosystem/grpc-gateway/pull/1027) ([dshemin](https://github.com/dshemin))
+- docs need type assertion on proto.Message [\#1026](https://github.com/grpc-ecosystem/grpc-gateway/pull/1026) ([zachgersh](https://github.com/zachgersh))
+- Update ISSUE\_TEMPLATE.md [\#1014](https://github.com/grpc-ecosystem/grpc-gateway/pull/1014) ([prologic](https://github.com/prologic))
+
+## [v1.11.1](https://github.com/grpc-ecosystem/grpc-gateway/tree/v1.11.1) (2019-09-02)
+[Full Changelog](https://github.com/grpc-ecosystem/grpc-gateway/compare/v1.11.0...v1.11.1)
+
+**Fixed bugs:**
+
+- protoc\_gen\_swagger openapiv2\_field definition ignores the type option [\#1002](https://github.com/grpc-ecosystem/grpc-gateway/issues/1002)
+
+**Closed issues:**
+
+- AnnotateIncomingContext not declared by package runtime [\#1023](https://github.com/grpc-ecosystem/grpc-gateway/issues/1023)
+- Fuzzit CI job is failing unexpectedly [\#1019](https://github.com/grpc-ecosystem/grpc-gateway/issues/1019)
+- Bazel Rule? [\#1010](https://github.com/grpc-ecosystem/grpc-gateway/issues/1010)
+
+**Merged pull requests:**
+
+- Generate changelog for 1.11.1 [\#1024](https://github.com/grpc-ecosystem/grpc-gateway/pull/1024) ([johanbrandhorst](https://github.com/johanbrandhorst))
+- Fuzzit: use go-fuzz with go-modules support [\#1022](https://github.com/grpc-ecosystem/grpc-gateway/pull/1022) ([yevgenypats](https://github.com/yevgenypats))
+- invoke in process server need attach md to incoming context [\#1021](https://github.com/grpc-ecosystem/grpc-gateway/pull/1021) ([hb-chen](https://github.com/hb-chen))
+
+## [v1.11.0](https://github.com/grpc-ecosystem/grpc-gateway/tree/v1.11.0) (2019-08-30)
+[Full Changelog](https://github.com/grpc-ecosystem/grpc-gateway/compare/v1.10.0...v1.11.0)
+
+**Fixed bugs:**
+
+- protoc-gen-grpc-gateway fails silently after release 1.10 [\#1013](https://github.com/grpc-ecosystem/grpc-gateway/issues/1013)
+
+**Closed issues:**
+
+- protoc-gen-swagger does not generate parameters other than body and path parameters. [\#1012](https://github.com/grpc-ecosystem/grpc-gateway/issues/1012)
+
+**Merged pull requests:**
+
+- Generate changelog for 1.11.0 [\#1020](https://github.com/grpc-ecosystem/grpc-gateway/pull/1020) ([johanbrandhorst](https://github.com/johanbrandhorst))
+- remove template func RegisterXXXServer\(\) unused param opts \[\]grpc.DialOption [\#1018](https://github.com/grpc-ecosystem/grpc-gateway/pull/1018) ([hb-chen](https://github.com/hb-chen))
+- Fix hand-crafted protobuf message [\#1016](https://github.com/grpc-ecosystem/grpc-gateway/pull/1016) ([dsnet](https://github.com/dsnet))
+- Bump ffi from 1.9.23 to 1.11.1 in /docs [\#1009](https://github.com/grpc-ecosystem/grpc-gateway/pull/1009) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump rubyzip from 1.2.1 to 1.2.3 in /docs [\#1008](https://github.com/grpc-ecosystem/grpc-gateway/pull/1008) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump nokogiri from 1.8.2 to 1.10.4 in /docs [\#1007](https://github.com/grpc-ecosystem/grpc-gateway/pull/1007) ([dependabot[bot]](https://github.com/apps/dependabot))
+
+## [v1.10.0](https://github.com/grpc-ecosystem/grpc-gateway/tree/v1.10.0) (2019-08-28)
+[Full Changelog](https://github.com/grpc-ecosystem/grpc-gateway/compare/v1.9.6...v1.10.0)
+
+**Implemented enhancements:**
+
+- allow protobuf well known types in params [\#400](https://github.com/grpc-ecosystem/grpc-gateway/issues/400)
+- Add a register, so that the gRPC service can be invoked in-process to provide a HTTP server. [\#947](https://github.com/grpc-ecosystem/grpc-gateway/pull/947) ([hb-chen](https://github.com/hb-chen))
+
+**Fixed bugs:**
+
+- grpc-gateway don't work well when using github.com/golang/protobuf/ptypes/struct with streaming [\#999](https://github.com/grpc-ecosystem/grpc-gateway/issues/999)
+
+**Closed issues:**
+
+- Allow final url path parameter to be optional [\#1005](https://github.com/grpc-ecosystem/grpc-gateway/issues/1005)
+- Update integration test dependencies [\#1004](https://github.com/grpc-ecosystem/grpc-gateway/issues/1004)
+- Suggestion: Continuous Fuzzing [\#998](https://github.com/grpc-ecosystem/grpc-gateway/issues/998)
+- Why grpc gateway does not call grpc callback directly? [\#952](https://github.com/grpc-ecosystem/grpc-gateway/issues/952)
+
+**Merged pull requests:**
+
+- Generate changelog for 1.10.0 [\#1011](https://github.com/grpc-ecosystem/grpc-gateway/pull/1011) ([johanbrandhorst](https://github.com/johanbrandhorst))
+- Fix templateToSwaggerPath generates invalid path [\#1006](https://github.com/grpc-ecosystem/grpc-gateway/pull/1006) ([ch3rub1m](https://github.com/ch3rub1m))
+- Allow overriding the primitive type of fields [\#1003](https://github.com/grpc-ecosystem/grpc-gateway/pull/1003) ([snowzach](https://github.com/snowzach))
+- Add Continuous Fuzzing Integration via fuzzit.dev [\#1001](https://github.com/grpc-ecosystem/grpc-gateway/pull/1001) ([yevgenypats](https://github.com/yevgenypats))
+
+## [v1.9.6](https://github.com/grpc-ecosystem/grpc-gateway/tree/v1.9.6) (2019-08-16)
+[Full Changelog](https://github.com/grpc-ecosystem/grpc-gateway/compare/v1.9.5...v1.9.6)
+
+**Closed issues:**
+
+- Returning a primitive type as a response instead of proto messages  [\#994](https://github.com/grpc-ecosystem/grpc-gateway/issues/994)
+- protoc-gen-swagger: fix description of google/protobuf/struct.proto types [\#989](https://github.com/grpc-ecosystem/grpc-gateway/issues/989)
+- Swagger generator does not convert parameters in URLs to camel case when `json\_names\_for\_fields` is enable.  [\#986](https://github.com/grpc-ecosystem/grpc-gateway/issues/986)
+- The release upload job is broken [\#981](https://github.com/grpc-ecosystem/grpc-gateway/issues/981)
+- Schema and field name questions from a front end developer [\#980](https://github.com/grpc-ecosystem/grpc-gateway/issues/980)
+- undefined: runtime.AssumeColonVerbOpt [\#978](https://github.com/grpc-ecosystem/grpc-gateway/issues/978)
+- I want to know how to transfer http+proto to grpc. [\#977](https://github.com/grpc-ecosystem/grpc-gateway/issues/977)
+- Is it possible to use protoc-gen-swagger options in my own protos? [\#976](https://github.com/grpc-ecosystem/grpc-gateway/issues/976)
+
+**Merged pull requests:**
+
+- Disable Windows CI Bazel [\#996](https://github.com/grpc-ecosystem/grpc-gateway/pull/996) ([achew22](https://github.com/achew22))
+- Correct HTTPBody doc [\#995](https://github.com/grpc-ecosystem/grpc-gateway/pull/995) ([johanbrandhorst](https://github.com/johanbrandhorst))
+- Generate changelog for 1.9.6 [\#993](https://github.com/grpc-ecosystem/grpc-gateway/pull/993) ([johanbrandhorst](https://github.com/johanbrandhorst))
+- protoc-gen-swagger: correctly type struct.proto types [\#990](https://github.com/grpc-ecosystem/grpc-gateway/pull/990) ([johanbrandhorst](https://github.com/johanbrandhorst))
+- Camel case backward compatible in Swagger doc [\#988](https://github.com/grpc-ecosystem/grpc-gateway/pull/988) ([xin-au](https://github.com/xin-au))
+- Add doc for opentracing support [\#987](https://github.com/grpc-ecosystem/grpc-gateway/pull/987) ([vthiery](https://github.com/vthiery))
+- Use json camel case when GetUseJSONNamesForFields is enabled [\#985](https://github.com/grpc-ecosystem/grpc-gateway/pull/985) ([xin-au](https://github.com/xin-au))
+- Create presubmit.yaml which configures CI [\#983](https://github.com/grpc-ecosystem/grpc-gateway/pull/983) ([achew22](https://github.com/achew22))
+- Fix release script [\#982](https://github.com/grpc-ecosystem/grpc-gateway/pull/982) ([johanbrandhorst](https://github.com/johanbrandhorst))
+- Upgrade to the latest rules\_go [\#979](https://github.com/grpc-ecosystem/grpc-gateway/pull/979) ([achew22](https://github.com/achew22))
+
+## [v1.9.5](https://github.com/grpc-ecosystem/grpc-gateway/tree/v1.9.5) (2019-07-22)
+[Full Changelog](https://github.com/grpc-ecosystem/grpc-gateway/compare/v1.9.4...v1.9.5)
+
+**Fixed bugs:**
+
+- Non-standard use of 412 HTTP Status Code [\#972](https://github.com/grpc-ecosystem/grpc-gateway/issues/972)
+
+**Closed issues:**
+
+- why response use enum's name [\#970](https://github.com/grpc-ecosystem/grpc-gateway/issues/970)
+
+**Merged pull requests:**
+
+- Generate changelog for 1.9.5 [\#975](https://github.com/grpc-ecosystem/grpc-gateway/pull/975) ([johanbrandhorst](https://github.com/johanbrandhorst))
+- Fix HTTP Status Code returned for a `Failed Precondition` error [\#974](https://github.com/grpc-ecosystem/grpc-gateway/pull/974) ([cjcormack](https://github.com/cjcormack))
+- Examples fix: Support preflight of auth libraries in js [\#973](https://github.com/grpc-ecosystem/grpc-gateway/pull/973) ([GhiaC](https://github.com/GhiaC))
+
+## [v1.9.4](https://github.com/grpc-ecosystem/grpc-gateway/tree/v1.9.4) (2019-07-09)
+[Full Changelog](https://github.com/grpc-ecosystem/grpc-gateway/compare/v1.9.3...v1.9.4)
+
+**Closed issues:**
+
+- Read the Http Post Body  [\#921](https://github.com/grpc-ecosystem/grpc-gateway/issues/921)
+- Swagger document generation, required field is invalid [\#665](https://github.com/grpc-ecosystem/grpc-gateway/issues/665)
+
+**Merged pull requests:**
+
+- Generate changelog for 1.9.4 [\#969](https://github.com/grpc-ecosystem/grpc-gateway/pull/969) ([johanbrandhorst](https://github.com/johanbrandhorst))
+- Fix query.go to avoid invalid protobuf assumptions [\#967](https://github.com/grpc-ecosystem/grpc-gateway/pull/967) ([dsnet](https://github.com/dsnet))
+- doc\(readme\): fix typo [\#965](https://github.com/grpc-ecosystem/grpc-gateway/pull/965) ([franxois](https://github.com/franxois))
+- Added comments to base\_path to explain behavior [\#919](https://github.com/grpc-ecosystem/grpc-gateway/pull/919) ([nu11ptr](https://github.com/nu11ptr))
+
+## [v1.9.3](https://github.com/grpc-ecosystem/grpc-gateway/tree/v1.9.3) (2019-06-28)
+[Full Changelog](https://github.com/grpc-ecosystem/grpc-gateway/compare/v1.9.2...v1.9.3)
+
+**Fixed bugs:**
+
+- EOF when calling Send for client streams [\#961](https://github.com/grpc-ecosystem/grpc-gateway/issues/961)
+
+**Closed issues:**
+
+- Please make a new release! [\#963](https://github.com/grpc-ecosystem/grpc-gateway/issues/963)
+- application/x-www-form-urlencoded support. [\#960](https://github.com/grpc-ecosystem/grpc-gateway/issues/960)
+- Bazel files are out of date [\#955](https://github.com/grpc-ecosystem/grpc-gateway/issues/955)
+- Configurable AllowUnknownFields in jsonpb? [\#448](https://github.com/grpc-ecosystem/grpc-gateway/issues/448)
+
+**Merged pull requests:**
+
+- Generate changelog for 1.9.3 [\#964](https://github.com/grpc-ecosystem/grpc-gateway/pull/964) ([johanbrandhorst](https://github.com/johanbrandhorst))
+- EOF on send [\#962](https://github.com/grpc-ecosystem/grpc-gateway/pull/962) ([gustavocovas](https://github.com/gustavocovas))
+- Add new option for the decoder - to disallow unknown fields [\#959](https://github.com/grpc-ecosystem/grpc-gateway/pull/959) ([vsaveliev](https://github.com/vsaveliev))
+- Update to rules\_go and buildtools [\#956](https://github.com/grpc-ecosystem/grpc-gateway/pull/956) ([drigz](https://github.com/drigz))
+- docs/customizingyourgateway: add ?pretty example [\#954](https://github.com/grpc-ecosystem/grpc-gateway/pull/954) ([srenatus](https://github.com/srenatus))
+- protoc\_gen\_swagger: Add attr for allow\_merge [\#944](https://github.com/grpc-ecosystem/grpc-gateway/pull/944) ([prestonvanloon](https://github.com/prestonvanloon))
+
+## [v1.9.2](https://github.com/grpc-ecosystem/grpc-gateway/tree/v1.9.2) (2019-06-17)
+[Full Changelog](https://github.com/grpc-ecosystem/grpc-gateway/compare/v1.9.1...v1.9.2)
+
+**Fixed bugs:**
+
+- 404s using colons in the middle of the last path segment [\#224](https://github.com/grpc-ecosystem/grpc-gateway/issues/224)
+
+**Merged pull requests:**
+
+- Generate changelog for 1.9.2 [\#953](https://github.com/grpc-ecosystem/grpc-gateway/pull/953) ([johanbrandhorst](https://github.com/johanbrandhorst))
+- Improve README file [\#950](https://github.com/grpc-ecosystem/grpc-gateway/pull/950) ([charleswhchan](https://github.com/charleswhchan))
+- Support colon in final path segment, last match wins behavior \(behind flags\) [\#949](https://github.com/grpc-ecosystem/grpc-gateway/pull/949) ([jfhamlin](https://github.com/jfhamlin))
+
+## [v1.9.1](https://github.com/grpc-ecosystem/grpc-gateway/tree/v1.9.1) (2019-06-13)
+[Full Changelog](https://github.com/grpc-ecosystem/grpc-gateway/compare/v1.9.0...v1.9.1)
+
+**Closed issues:**
+
+- grpc: received message larger than max [\#943](https://github.com/grpc-ecosystem/grpc-gateway/issues/943)
+- json 1.1 api support for grpc-ecosystem to use queryparams with filter [\#938](https://github.com/grpc-ecosystem/grpc-gateway/issues/938)
+- i import a new gateway.Endpoint without recompile [\#937](https://github.com/grpc-ecosystem/grpc-gateway/issues/937)
+- all SubConns are in TransientFailure [\#936](https://github.com/grpc-ecosystem/grpc-gateway/issues/936)
+- Merging swagger specs fails to use rpc comments \(again\) [\#923](https://github.com/grpc-ecosystem/grpc-gateway/issues/923)
+
+**Merged pull requests:**
+
+- Generate changelog for 1.9.1 [\#946](https://github.com/grpc-ecosystem/grpc-gateway/pull/946) ([johanbrandhorst](https://github.com/johanbrandhorst))
+- Revert "protoc-gen-swagger: check typeIndex when typeName is Method" [\#945](https://github.com/grpc-ecosystem/grpc-gateway/pull/945) ([johanbrandhorst](https://github.com/johanbrandhorst))
+- fix query params not populate if method is post [\#939](https://github.com/grpc-ecosystem/grpc-gateway/pull/939) ([mingqing](https://github.com/mingqing))
+- Fix make test on MacOS [\#935](https://github.com/grpc-ecosystem/grpc-gateway/pull/935) ([emilaasa](https://github.com/emilaasa))
+
 ## [v1.9.0](https://github.com/grpc-ecosystem/grpc-gateway/tree/v1.9.0) (2019-05-14)
 [Full Changelog](https://github.com/grpc-ecosystem/grpc-gateway/compare/v1.8.6...v1.9.0)
 
@@ -9,6 +565,7 @@
 
 **Merged pull requests:**
 
+- Generate changelog for 1.9.0 [\#933](https://github.com/grpc-ecosystem/grpc-gateway/pull/933) ([johanbrandhorst](https://github.com/johanbrandhorst))
 - use error value for bad URI so custom error handler could treat it special [\#932](https://github.com/grpc-ecosystem/grpc-gateway/pull/932) ([jhump](https://github.com/jhump))
 - newline between JSON messages [\#931](https://github.com/grpc-ecosystem/grpc-gateway/pull/931) ([jhump](https://github.com/jhump))
 - ability to customize stream errors [\#930](https://github.com/grpc-ecosystem/grpc-gateway/pull/930) ([jhump](https://github.com/jhump))
@@ -202,10 +759,6 @@
 ## [v1.6.3](https://github.com/grpc-ecosystem/grpc-gateway/tree/v1.6.3) (2018-12-21)
 [Full Changelog](https://github.com/grpc-ecosystem/grpc-gateway/compare/v1.6.2...v1.6.3)
 
-**Fixed bugs:**
-
-- Comments of rpc method gets copied if multiple services are present in a proto file. [\#746](https://github.com/grpc-ecosystem/grpc-gateway/issues/746)
-
 **Closed issues:**
 
 - Issue with google.protobuf.Empty representation in swagger file [\#831](https://github.com/grpc-ecosystem/grpc-gateway/issues/831)
@@ -341,7 +894,6 @@
 - r [\#684](https://github.com/grpc-ecosystem/grpc-gateway/issues/684)
 - url query parameters should support semicolon in value field [\#680](https://github.com/grpc-ecosystem/grpc-gateway/issues/680)
 - how to install swagger-codegen@2.2.2? [\#670](https://github.com/grpc-ecosystem/grpc-gateway/issues/670)
-- Merging swagger specs fails to use rpc comments [\#664](https://github.com/grpc-ecosystem/grpc-gateway/issues/664)
 - Impossible to use gogo/protobuf registered types in gRPC Status errors [\#576](https://github.com/grpc-ecosystem/grpc-gateway/issues/576)
 - Path parameters can't have URL encoded values [\#566](https://github.com/grpc-ecosystem/grpc-gateway/issues/566)
 - docs: show example of tracing over http-\>grpc boundary [\#348](https://github.com/grpc-ecosystem/grpc-gateway/issues/348)
@@ -370,7 +922,7 @@
 - Populate swagger method parameter description from message comments [\#692](https://github.com/grpc-ecosystem/grpc-gateway/pull/692) ([co3k](https://github.com/co3k))
 - Updated doc and comments to reflect Permanent HTTP header keys prefixing [\#691](https://github.com/grpc-ecosystem/grpc-gateway/pull/691) ([crozzy](https://github.com/crozzy))
 - protoc-gen-swagger: support JSON Schema Validation properties and add openapiv2\_field option [\#687](https://github.com/grpc-ecosystem/grpc-gateway/pull/687) ([co3k](https://github.com/co3k))
-- Bazel expose protoc-gen-grpc-gateway [\#668](https://github.com/grpc-ecosystem/grpc-gateway/pull/668) ([afking](https://github.com/afking))
+- Bazel expose protoc-gen-grpc-gateway [\#668](https://github.com/grpc-ecosystem/grpc-gateway/pull/668) ([emcfarlane](https://github.com/emcfarlane))
 -  Fix protoc-gen-swagger to output gRPC method summary and descriptions as Swagger's them [\#667](https://github.com/grpc-ecosystem/grpc-gateway/pull/667) ([co3k](https://github.com/co3k))
 - Allow explicit empty security definition to overwrite existing definitions [\#666](https://github.com/grpc-ecosystem/grpc-gateway/pull/666) ([co3k](https://github.com/co3k))
 -  protoc-gen-swagger: Add ability to specify custom response objects  [\#663](https://github.com/grpc-ecosystem/grpc-gateway/pull/663) ([johanbrandhorst](https://github.com/johanbrandhorst))
@@ -449,7 +1001,7 @@
 - Fixes file integrity errors on TravisCI [\#619](https://github.com/grpc-ecosystem/grpc-gateway/pull/619) ([yugui](https://github.com/yugui))
 - Reorganize examples [\#618](https://github.com/grpc-ecosystem/grpc-gateway/pull/618) ([yugui](https://github.com/yugui))
 - Update dependency declarations in the Makefile [\#617](https://github.com/grpc-ecosystem/grpc-gateway/pull/617) ([yugui](https://github.com/yugui))
-- Support delete method in swagger generator [\#616](https://github.com/grpc-ecosystem/grpc-gateway/pull/616) ([blackdahila](https://github.com/blackdahila))
+- Support delete method in swagger generator [\#616](https://github.com/grpc-ecosystem/grpc-gateway/pull/616) ([beerose](https://github.com/beerose))
 - feat\(bazel\): Add rule for generating .swagger.json files [\#613](https://github.com/grpc-ecosystem/grpc-gateway/pull/613) ([mrmeku](https://github.com/mrmeku))
 - Support UNIX domain socket in the example servers [\#609](https://github.com/grpc-ecosystem/grpc-gateway/pull/609) ([yugui](https://github.com/yugui))
 - misspelling [\#601](https://github.com/grpc-ecosystem/grpc-gateway/pull/601) ([chemidy](https://github.com/chemidy))
@@ -489,7 +1041,7 @@
 - properly respect file flag for protoc-gen-swagger [\#293](https://github.com/grpc-ecosystem/grpc-gateway/pull/293) ([tmc](https://github.com/tmc))
 
 ## [v1.3.1](https://github.com/grpc-ecosystem/grpc-gateway/tree/v1.3.1) (2017-12-23)
-[Full Changelog](https://github.com/grpc-ecosystem/grpc-gateway/compare/v1.3.0...v1.3.1)
+[Full Changelog](https://github.com/grpc-ecosystem/grpc-gateway/compare/v1.3...v1.3.1)
 
 **Implemented enhancements:**
 
@@ -498,7 +1050,6 @@
 **Closed issues:**
 
 - protoc-gen-swagger missing definition issue [\#504](https://github.com/grpc-ecosystem/grpc-gateway/issues/504)
-- Are gateway metrics available? [\#498](https://github.com/grpc-ecosystem/grpc-gateway/issues/498)
 - Backwards incompatible change to chunked encoding [\#495](https://github.com/grpc-ecosystem/grpc-gateway/issues/495)
 - Map of list [\#493](https://github.com/grpc-ecosystem/grpc-gateway/issues/493)
 - How to run `makefile` for this repo? [\#491](https://github.com/grpc-ecosystem/grpc-gateway/issues/491)
@@ -540,17 +1091,17 @@
 - Maintain default delimiter of newline [\#497](https://github.com/grpc-ecosystem/grpc-gateway/pull/497) ([jacksontj](https://github.com/jacksontj))
 - Fix gen-swagger to support more well known types [\#496](https://github.com/grpc-ecosystem/grpc-gateway/pull/496) ([shouichi](https://github.com/shouichi))
 - Use golang/protobuf instead of gogo/protobuf [\#494](https://github.com/grpc-ecosystem/grpc-gateway/pull/494) ([shouichi](https://github.com/shouichi))
-- Fix stream delimiters [\#488](https://github.com/grpc-ecosystem/grpc-gateway/pull/488) ([afking](https://github.com/afking))
-- ForwardResponseStream status code errors [\#482](https://github.com/grpc-ecosystem/grpc-gateway/pull/482) ([afking](https://github.com/afking))
+- Fix stream delimiters [\#488](https://github.com/grpc-ecosystem/grpc-gateway/pull/488) ([emcfarlane](https://github.com/emcfarlane))
+- ForwardResponseStream status code errors [\#482](https://github.com/grpc-ecosystem/grpc-gateway/pull/482) ([emcfarlane](https://github.com/emcfarlane))
 - protoc-gen-grpc-gateway: flip request\_context default to true [\#474](https://github.com/grpc-ecosystem/grpc-gateway/pull/474) ([srenatus](https://github.com/srenatus))
 - grpc-gateway/generator: respect full package [\#462](https://github.com/grpc-ecosystem/grpc-gateway/pull/462) ([glerchundi](https://github.com/glerchundi))
 - Add proto marshaller for proto-over-http [\#459](https://github.com/grpc-ecosystem/grpc-gateway/pull/459) ([MatthewDolan](https://github.com/MatthewDolan))
 
-## [v1.3.0](https://github.com/grpc-ecosystem/grpc-gateway/tree/v1.3.0) (2017-11-03)
-[Full Changelog](https://github.com/grpc-ecosystem/grpc-gateway/compare/v1.3...v1.3.0)
-
 ## [v1.3](https://github.com/grpc-ecosystem/grpc-gateway/tree/v1.3) (2017-11-03)
-[Full Changelog](https://github.com/grpc-ecosystem/grpc-gateway/compare/v1.2.2...v1.3)
+[Full Changelog](https://github.com/grpc-ecosystem/grpc-gateway/compare/v1.3.0...v1.3)
+
+## [v1.3.0](https://github.com/grpc-ecosystem/grpc-gateway/tree/v1.3.0) (2017-11-03)
+[Full Changelog](https://github.com/grpc-ecosystem/grpc-gateway/compare/v1.2.2...v1.3.0)
 
 **Closed issues:**
 
@@ -593,10 +1144,10 @@
 **Merged pull requests:**
 
 - Fix wrong method names [\#603](https://github.com/grpc-ecosystem/grpc-gateway/pull/603) ([yugui](https://github.com/yugui))
-- Streaming forward handler fix chunk encoding [\#479](https://github.com/grpc-ecosystem/grpc-gateway/pull/479) ([afking](https://github.com/afking))
+- Streaming forward handler fix chunk encoding [\#479](https://github.com/grpc-ecosystem/grpc-gateway/pull/479) ([emcfarlane](https://github.com/emcfarlane))
 - Fix logic handling primitive wrapper in URL params [\#478](https://github.com/grpc-ecosystem/grpc-gateway/pull/478) ([tgeng](https://github.com/tgeng))
 - runtime: use r.Context\(\) [\#473](https://github.com/grpc-ecosystem/grpc-gateway/pull/473) ([srenatus](https://github.com/srenatus))
-- Optional SourceCodeInfo [\#466](https://github.com/grpc-ecosystem/grpc-gateway/pull/466) ([afking](https://github.com/afking))
+- Optional SourceCodeInfo [\#466](https://github.com/grpc-ecosystem/grpc-gateway/pull/466) ([emcfarlane](https://github.com/emcfarlane))
 - Some steps to fix Travis CI [\#461](https://github.com/grpc-ecosystem/grpc-gateway/pull/461) ([AlekSi](https://github.com/AlekSi))
 - fix 2 typos in Registry.SetPrefix's comment [\#455](https://github.com/grpc-ecosystem/grpc-gateway/pull/455) ([hectorj](https://github.com/hectorj))
 - Add Handler method to pass in client [\#454](https://github.com/grpc-ecosystem/grpc-gateway/pull/454) ([jacksontj](https://github.com/jacksontj))
@@ -637,7 +1188,6 @@
 **Closed issues:**
 
 - Empty value omitted [\#355](https://github.com/grpc-ecosystem/grpc-gateway/issues/355)
-- Must generate reverse proxy in same package? [\#353](https://github.com/grpc-ecosystem/grpc-gateway/issues/353)
 - Release 1.2.0 [\#340](https://github.com/grpc-ecosystem/grpc-gateway/issues/340)
 - Cut another release [\#278](https://github.com/grpc-ecosystem/grpc-gateway/issues/278)
 
@@ -816,7 +1366,7 @@
 - Method parameter in query string [\#6](https://github.com/grpc-ecosystem/grpc-gateway/issues/6)
 - Integrate authentication [\#4](https://github.com/grpc-ecosystem/grpc-gateway/issues/4)
 - Add swagger support [\#68](https://github.com/grpc-ecosystem/grpc-gateway/pull/68) ([achew22](https://github.com/achew22))
-- Add runtime.WithForwardResponseOption [\#53](https://github.com/grpc-ecosystem/grpc-gateway/pull/53) ([pedgeio](https://github.com/pedgeio))
+- Add runtime.WithForwardResponseOption [\#53](https://github.com/grpc-ecosystem/grpc-gateway/pull/53) ([bufdev](https://github.com/bufdev))
 
 **Fixed bugs:**
 
@@ -926,15 +1476,15 @@
 - Fix broken test [\#76](https://github.com/grpc-ecosystem/grpc-gateway/pull/76) ([yugui](https://github.com/yugui))
 - Added missing instruction line in README  [\#75](https://github.com/grpc-ecosystem/grpc-gateway/pull/75) ([betrcode](https://github.com/betrcode))
 - Fix a complie error in generated go files [\#71](https://github.com/grpc-ecosystem/grpc-gateway/pull/71) ([yugui](https://github.com/yugui))
-- Update generated .pb.go files in third\_party [\#69](https://github.com/grpc-ecosystem/grpc-gateway/pull/69) ([pedgeio](https://github.com/pedgeio))
+- Update generated .pb.go files in third\_party [\#69](https://github.com/grpc-ecosystem/grpc-gateway/pull/69) ([bufdev](https://github.com/bufdev))
 - Bugfix/handling headers for `Authorization` and `Host` [\#65](https://github.com/grpc-ecosystem/grpc-gateway/pull/65) ([mwitkow](https://github.com/mwitkow))
 - Fix `error` field always in chunk response [\#64](https://github.com/grpc-ecosystem/grpc-gateway/pull/64) ([mwitkow](https://github.com/mwitkow))
 - Update .pb.go to latest version. [\#63](https://github.com/grpc-ecosystem/grpc-gateway/pull/63) ([johansja](https://github.com/johansja))
 - Run more tests in Travis CI [\#60](https://github.com/grpc-ecosystem/grpc-gateway/pull/60) ([yugui](https://github.com/yugui))
 - Added http error code and error status for responseStreamChunk error [\#59](https://github.com/grpc-ecosystem/grpc-gateway/pull/59) ([kdima](https://github.com/kdima))
 - Fix parsing of verb and final path component. [\#55](https://github.com/grpc-ecosystem/grpc-gateway/pull/55) ([hbchai](https://github.com/hbchai))
-- add grpc.WithInsecure\(\) as option for grpc.Dial call in template [\#52](https://github.com/grpc-ecosystem/grpc-gateway/pull/52) ([pedgeio](https://github.com/pedgeio))
-- update .pb.go files for latest golang proto generation [\#51](https://github.com/grpc-ecosystem/grpc-gateway/pull/51) ([pedgeio](https://github.com/pedgeio))
+- add grpc.WithInsecure\(\) as option for grpc.Dial call in template [\#52](https://github.com/grpc-ecosystem/grpc-gateway/pull/52) ([bufdev](https://github.com/bufdev))
+- update .pb.go files for latest golang proto generation [\#51](https://github.com/grpc-ecosystem/grpc-gateway/pull/51) ([bufdev](https://github.com/bufdev))
 - Fix a build error with the latest protoc-gen-go [\#50](https://github.com/grpc-ecosystem/grpc-gateway/pull/50) ([yugui](https://github.com/yugui))
 - Configure Travis CI [\#49](https://github.com/grpc-ecosystem/grpc-gateway/pull/49) ([yugui](https://github.com/yugui))
 - Follow a change of go package name convention in protoc-gen-go [\#48](https://github.com/grpc-ecosystem/grpc-gateway/pull/48) ([yugui](https://github.com/yugui))
