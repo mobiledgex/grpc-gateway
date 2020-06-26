@@ -12,5 +12,5 @@ require (
 	golang.org/x/oauth2 v0.0.0-20200107190931-bf48bf16ab8d
 	google.golang.org/genproto v0.0.0-20200513103714-09dca8ec2884
 	google.golang.org/grpc v1.30.0
-	gopkg.in/yaml.v2 v2.2.3 // indirect
+	gopkg.in/yaml.v2 v2.2.3
 )
